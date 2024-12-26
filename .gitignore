@@ -1,0 +1,5 @@
+dataset/*
+weights/*
+
+__pycache__/
+.venv/
