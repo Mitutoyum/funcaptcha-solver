@@ -60,6 +60,8 @@ def train(model, criterion, optimizer, dataset, epochs):
                     tepoch.set_postfix(
                         loss=loss.item(), accuracy=100.0 * correct / batch_size
                     )
+            if epoch == epochs:
+                print(f"Final accuracy: {100. * train_correct / train_loader.dataset}")
         finally:
             checkpoint = {
                 "model": model.state_dict(),
